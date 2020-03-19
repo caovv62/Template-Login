@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body>
+    <div class="loginbox">
+        <img src="src/images.png" class="avatar">
+        <form>
+            <h2>Login</h2>
+            <p>Username</p>
+                <input type="text" name="username" placeholder="enter username" id="username"/>
+                <p>Password</p>
+                <input type="password" name="password" placeholder="enter password" id="password"/>
+                <input type="submit" name="" value="Login" onclick="return Login()"/>
+                <div id = "message">
+                    <a href="#">Forget Password?</a><br/>
+                    <a href="login1.html">Don't have account?</a>
+                </div>
+                
+        </form>
+    </div>
+    <script language = "javascript">
+        function Login(){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            var mess = document.getElementById('message');
+
+            if(username == ""){
+                mess.innerHTML = "Not input username!"
+                mess.style.color = "red";
+                return false;
+            }
+            if(password == ""){
+                mess.innerHTML = "Not input password!"
+                mess.style.color = "red";
+                return false;
+            }
+                mess.innerHTML = "Successfully!";
+                mess.style.color = "yellow";
+            return true;
+        }
+    </script>
+</body>
+</html>
